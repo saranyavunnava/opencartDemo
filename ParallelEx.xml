@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="Utilities.ExtentReportManager"></listener>
+		<listener class-name="Utilities.RetryListener"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<parameter name="os" value="Windows"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
+		<groups>
+			<run>
+				<include name="test"></include>
+				<!--<include name="sanity"></include>
+				<include name="smoke"></include>
+			--></run>
+		</groups>
+		<classes>
+			<class name="TestCases.TC001_AccountRegistrationTest" />
+			<class name="TestCases.TC002_AccountLogin"></class>
+			<class name="TestCases.TC003_AccountLoginDDT"></class>
+			<class name="TestCases.TC004_SearchByItem"></class>
+			<class name="TestCases.TC005_CheckoutFunctionalityValidation"></class>
+		</classes>
+	</test>
+</suite> 
+
