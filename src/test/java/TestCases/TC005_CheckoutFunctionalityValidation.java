@@ -10,13 +10,13 @@ import TestBase.BaseClass;
 
 public class TC005_CheckoutFunctionalityValidation extends BaseClass{
 
-	@Test(groups= {"test"})
+	@Test(groups= {"smoke"})
 	public void checkOutItems() {
 		logger.info("Verifying checkout functionality....");
-		HomePage home=new HomePage(driver);
+		HomePage home=new HomePage(BaseClass.getDriver());
 		home.clickCheckoutLink();
 		logger.info("checkout link from homepage is clicked....");
-		CheckoutPage chkout=new CheckoutPage(driver);
+		CheckoutPage chkout=new CheckoutPage(BaseClass.getDriver());
 		try {
 			chkout.getCartTotal();
 			chkout.clickCouponSection();

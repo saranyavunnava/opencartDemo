@@ -16,15 +16,15 @@ public class TC003_AccountLoginDDT extends BaseClass {
 	@Test(groups={"sanity"},dataProvider = "LoginData", dataProviderClass = DataProviders.class)
 	public void accountLoginDD(String email, String pwd, String exp) {
 		try {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage(BaseClass.getDriver());
 		homePage.clickMyAccount();
 		logger.info("Starting verify login test case.......");
 		homePage.clickLogin();
-		LoginPage login = new LoginPage(driver);
+		LoginPage login = new LoginPage(BaseClass.getDriver());
 		login.setUserName(email);
 		login.setPassword(pwd);
 		login.clickLogin();
-		MyAccountPage account = new MyAccountPage(driver);
+		MyAccountPage account = new MyAccountPage(BaseClass.getDriver());
 		if (exp.equalsIgnoreCase("valid")) {
 			boolean trgpage = account.verifyMsg();
 			if (trgpage == true) {
@@ -58,14 +58,14 @@ public class TC003_AccountLoginDDT extends BaseClass {
 	public void clickMyAccountLink() {
 		
 		logger.info("Starting verify links test case.......");
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage(BaseClass.getDriver());
 		homePage.clickMyAccount();
 		homePage.clickLogin();
-		LoginPage login = new LoginPage(driver);
+		LoginPage login = new LoginPage(BaseClass.getDriver());
 		login.setUserName(prop.getProperty("userName"));
 		login.setPassword(prop.getProperty("password"));
 		login.clickLogin();
-		MyAccountPage account=new MyAccountPage(driver);
+		MyAccountPage account=new MyAccountPage(BaseClass.getDriver());
 		//Assert.assertTrue(account.clickMyAccountLink(), "My Account link is not displayed");
 		boolean lnkDisplayed=account.clickMyAccountLink();
 		if(!lnkDisplayed) {

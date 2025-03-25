@@ -103,12 +103,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC005_CheckoutFunctionalityValidation" class="method navigator-link" hash-for-method="checkOutItems">checkOutItems</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCases.TC006_AddItemToCart" class="method navigator-link" hash-for-method="addItem">addItem</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.TC005_CheckoutFunctionalityValidation" class="method navigator-link" hash-for-method="checkOutItems">checkOutItems</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCases.TC006_AddItemToCart" class="method navigator-link" hash-for-method="addItem">addItem</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -126,30 +126,53 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">TestCases.TC005_CheckoutFunctionalityValidation</span>
+              <span class="class-name">TestCases.TC006_AddItemToCart</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkOutItems">
-                  </a> <!-- checkOutItems -->
-                  <span class="method-name">checkOutItems</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;this.extentTest&quot; is null
-	at Utilities.ExtentReportManager.onTestSkipped(ExtentReportManager.java:98)
+                  <a name="addItem">
+                  </a> <!-- addItem -->
+                  <span class="method-name">addItem</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li//a[normalize-space()=&apos;Login&apos;]&quot;}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3862126eb34941b08e401e76da183e57, findElement {value=//li//a[normalize-space()=&apos;Login&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: C:\Users\sures\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55849}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55849/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3862126eb34941b08e401e76da183e57
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+	at PageObjects.HomePage.clickLogin(HomePage.java:36)
+	at TestCases.TC006_AddItemToCart.addItem(TC006_AddItemToCart.java:19)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 24 stack frames
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="checkOutItems">
-                  </a> <!-- checkOutItems -->
-                  <span class="method-name">checkOutItems</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at TestCases.TC005_CheckoutFunctionalityValidation.checkOutItems(TC005_CheckoutFunctionalityValidation.java:25)
+                  <a name="addItem">
+                  </a> <!-- addItem -->
+                  <span class="method-name">addItem</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)&quot; because &quot;this.extentTest&quot; is null
+	at Utilities.ExtentReportManager.onTestSkipped(ExtentReportManager.java:99)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
+... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -183,6 +206,7 @@
       &lt;class name=&quot;TestCases.TC003_AccountLoginDDT&quot;/&gt;
       &lt;class name=&quot;TestCases.TC004_SearchByItem&quot;/&gt;
       &lt;class name=&quot;TestCases.TC005_CheckoutFunctionalityValidation&quot;/&gt;
+      &lt;class name=&quot;TestCases.TC006_AddItemToCart&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -196,7 +220,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (5 classes)</span>
+                <span class="test-name">Test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -210,7 +234,7 @@
               <span class="test-group-name">test</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">checkOutItems</span>
+                <span class="method-in-group-name">addItem</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -232,18 +256,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkOutItems')
-data.setCell(0, 2, 'TestCases.TC005_CheckoutFunctionalityValidation')
-data.setCell(0, 3, 2258);
+data.setCell(0, 1, 'addItem')
+data.setCell(0, 2, 'TestCases.TC006_AddItemToCart')
+data.setCell(0, 3, 4013);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'checkOutItems')
-data.setCell(1, 2, 'TestCases.TC005_CheckoutFunctionalityValidation')
-data.setCell(1, 3, 989);
+data.setCell(1, 1, 'addItem')
+data.setCell(1, 2, 'TestCases.TC006_AddItemToCart')
+data.setCell(1, 3, 236);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -258,20 +282,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">6 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCases.TC004_SearchByItem</span>
+              <span class="ignored-class-name">TestCases.TC003_AccountLoginDDT</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">searchItem</span>
+                <span class="ignored-method-name">clickMyAccountLink</span>
+                <br/>
+                <span class="ignored-method-name">accountLoginDD</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCases.TC002_AccountLogin</span>
+              <span class="ignored-class-name">TestCases.TC005_CheckoutFunctionalityValidation</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyLogin</span>
+                <span class="ignored-method-name">checkOutItems</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -283,11 +309,16 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCases.TC003_AccountLoginDDT</span>
+              <span class="ignored-class-name">TestCases.TC002_AccountLogin</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">clickMyAccountLink</span>
+                <span class="ignored-method-name">verifyLogin</span>
                 <br/>
-                <span class="ignored-method-name">accountLoginDD</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.TC004_SearchByItem</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">searchItem</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -299,7 +330,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.TC005_CheckoutFunctionalityValidation</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.TC006_AddItemToCart</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome, Windows)</span>
                 <span class="method-start">0 ms</span>
@@ -307,15 +338,19 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">checkOutItems</span>
-                <span class="method-start">5960 ms</span>
+                <span class="method-name">addItem</span>
+                <span class="method-start">5338 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">checkOutItems</span>
-                <span class="method-start">7055 ms</span>
+                <span class="method-name">addItem</span>
+                <span class="method-start">8902 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">9500 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

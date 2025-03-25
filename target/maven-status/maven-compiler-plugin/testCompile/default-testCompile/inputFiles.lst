@@ -1,4 +1,5 @@
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\PageObjects\BasePage.java
+C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\PageObjects\CheckoutPage.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\PageObjects\HomePage.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\PageObjects\LoginPage.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\PageObjects\MyAccountPage.java
@@ -7,6 +8,8 @@ C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\TestBase\BaseClass.
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\TestCases\TC001_AccountRegistrationTest.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\TestCases\TC002_AccountLogin.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\TestCases\TC003_AccountLoginDDT.java
+C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\TestCases\TC004_SearchByItem.java
+C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\TestCases\TC005_CheckoutFunctionalityValidation.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\Utilities\DataProviders.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\Utilities\ExcelUtility.java
 C:\Users\sures\eclipse-workspace\OpenCartDemo2\src\test\java\Utilities\ExtentReportManager.java

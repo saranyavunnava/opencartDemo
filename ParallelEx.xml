@@ -10,10 +10,10 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<groups>
 			<run>
+				<!--<include name="smoke"></include>
+				<include name="sanity"></include>-->
 				<include name="test"></include>
-				<!--<include name="sanity"></include>
-				<include name="smoke"></include>
-			--></run>
+			</run>
 		</groups>
 		<classes>
 			<class name="TestCases.TC001_AccountRegistrationTest" />
@@ -21,6 +21,7 @@
 			<class name="TestCases.TC003_AccountLoginDDT"></class>
 			<class name="TestCases.TC004_SearchByItem"></class>
 			<class name="TestCases.TC005_CheckoutFunctionalityValidation"></class>
+			<class name="TestCases.TC006_AddItemToCart"></class>
 		</classes>
 	</test>
 </suite> 

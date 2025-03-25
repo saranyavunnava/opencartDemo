@@ -41,7 +41,7 @@ public class ExtentReportManager implements ITestListener {
 		 * DateFormat date = new SimpleDateFormat("yyyy.MM.dd HH:MM:SS"); Date d = new
 		 * Date(); String ff = date.format(d);
 		 */
-		ff = new SimpleDateFormat("DD.MM.YYYY_HH.m.ss").format(new Date());
+		ff = new SimpleDateFormat("dd.MM.YYYY_HH.m.ss").format(new Date());
 		path = "Test_Automation_" + ff + ".html";
 		sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/Reports/" + path);
 		// ExtentSparkReporter("C:\\Users\\sures\\eclipse-workspace\\HybridFrameWorkEx\\Reports"+path);
@@ -69,6 +69,7 @@ public class ExtentReportManager implements ITestListener {
 		System.out.println("hello Im in On test success method...");
 	}
 
+	@Override
 	public void onTestFailure(ITestResult result) {
 		extentTest = extentReports.createTest(result.getName());
 		// extentTest.log(Status.FAIL, "Test case failed " + result.getName());
@@ -79,7 +80,7 @@ public class ExtentReportManager implements ITestListener {
 		 * extentTest.addScreenCaptureFromPath(path);
 		 */
 		// Implemented screenshot feature in failure scenario
-		ts = (TakesScreenshot) BaseClass.driver;
+		ts = (TakesScreenshot)BaseClass.getDriver();
 		try {
 			File src = ts.getScreenshotAs(OutputType.FILE);
 			String dest = System.getProperty("user.dir") + "\\Screenshots\\" + result.getName() + "\\Automation.jpg";

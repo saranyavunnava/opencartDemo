@@ -13,15 +13,15 @@ public class TC002_AccountLogin extends BaseClass{
 	@Test(groups={"smoke","regression"})
 	public void verifyLogin() {
 		try {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage(BaseClass.getDriver());
 		homePage.clickMyAccount();
 		logger.info("Starting verify login test case.......");
 		homePage.clickLogin();
-		LoginPage login=new LoginPage(driver);
+		LoginPage login=new LoginPage(BaseClass.getDriver());
 		login.setUserName(prop.getProperty("userName"));
 		login.setPassword(prop.getProperty("password"));
 		login.clickLogin();
-		MyAccountPage account=new MyAccountPage(driver);
+		MyAccountPage account=new MyAccountPage(BaseClass.getDriver());
 		if(account!=null) {
 			Assert.assertTrue(account.verifyMsg(), "Account page is displayed...");
 			account.clickLogout();

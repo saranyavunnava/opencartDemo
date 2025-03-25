@@ -1,5 +1,7 @@
 package TestBase;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterMethod;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -24,28 +26,41 @@ import org.testng.annotations.Parameters;
 
 import Utilities.ExtentReportManager;
 
-
 public class BaseClass {
-	public static WebDriver driver;
+	//public static WebDriver driver;
 	public static Logger logger;
 	public Properties prop;
+	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
+	public static WebDriver getDriver() {
+		return driver.get();
+	}
+
+	public static void setDriver(WebDriver driverInstance) {
+        driver.set(driverInstance);
+        System.out.println("Browser setup by Thread : " + Thread.currentThread().getId() + " and Driver reference is : "
+                + getDriver());
+    }
+	
 	// Loading Properties file
-	@BeforeClass(groups = { "smoke", "sanity", "regression","test" })
+	@BeforeClass(groups = { "smoke", "sanity", "regression", "test" })
 	@Parameters({ "browser", "os" })
 	public void setup(String browser, String os) throws IOException {
 		prop = new Properties();
 		prop.load(new FileReader("./src//test//resources/config.properties"));
 		switch (browser.toLowerCase()) {
 		case "chrome":
-			driver = new ChromeDriver();
+			// driver = new ChromeDriver();
+			setDriver(new ChromeDriver());
 			break;
 		case "edge":
-			driver = new EdgeDriver();
+			// driver = new EdgeDriver();
+			setDriver(new EdgeDriver());
 			break;
 		default:
 			throw new IllegalArgumentException("Invalid browser name..." + browser);
 		}
+		WebDriver driver=getDriver();
 
 		driver.manage().deleteAllCookies();
 		driver.get(prop.getProperty("appURL"));
@@ -68,14 +83,19 @@ public class BaseClass {
 
 		String path = System.getProperty("user.dir") + "\\Screenshots\\" + name + ".png";
 		File dest = new File(path);
-		TakesScreenshot ts = (TakesScreenshot) driver;
+		TakesScreenshot ts = (TakesScreenshot) getDriver();
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		src.renameTo(dest);
 		return path;
 	}
 
-	@AfterClass(groups = { "sanity", "smoke", "regression" })
-	public void tearDown() {
-		 driver.quit();
-	}
-}
+	
+	@AfterClass(groups = { "sanity", "smoke", "regression","test" })
+	 public void tearDown() throws InterruptedException {
+		Thread.sleep(5000);
+		      // WebDriver driver = getDriver();
+		        if (driver != null) {
+		            driver.get().quit();
+		        }
+		        Thread.sleep(5000);
+		       driver.remove();}}

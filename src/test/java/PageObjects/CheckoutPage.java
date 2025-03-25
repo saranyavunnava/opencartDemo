@@ -2,7 +2,9 @@ package PageObjects;
 
 import static org.testng.Assert.assertTrue;
 
+import java.awt.geom.IllegalPathStateException;
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.OptionalInt;
 
@@ -43,8 +45,12 @@ public class CheckoutPage extends BasePage {
 	}
 	}
 		public void clickCouponSection() {
+			try {
 			if(couponCaret.isEnabled() && couponCaret.isDisplayed()) {
 				couponCaret.click();
+			}}
+			catch (Exception e) {
+				throw new NoSuchElementException("coupon section is not available...");
 			}
 		}
 }

@@ -22,10 +22,10 @@ public class TC001_AccountRegistrationTest extends BaseClass {
 	public void verifyAccountRegistration() throws InterruptedException {
 		logger.info("Starting verifyAccountRegistration test case..... ");
 
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage(BaseClass.getDriver());
 		homePage.clickMyAccount();
 		homePage.clickRegisterLink();
-		RegistrationPage regPage = new RegistrationPage(driver);
+		RegistrationPage regPage = new RegistrationPage(BaseClass.getDriver());
 		regPage.setFirstName(generateString().toUpperCase());
 		regPage.setLastName(generateString().toUpperCase());
 		String email = generateString() + "@gmail.com";

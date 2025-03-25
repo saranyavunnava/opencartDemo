@@ -28,9 +28,10 @@ public class ExcelUtility {
 		this.path = path;
 	}
 
-	public void readFile() {
+	public void readFile(String path) {
 		try {
-			file = new File("./TestData//TestData.xlsx");
+			//file = new File("./TestData//TestData.xlsx");
+			file=new File(path);
 			if (file.exists()) {
 				fis = new FileInputStream(file);
 				workbook = new XSSFWorkbook(fis);
@@ -46,7 +47,7 @@ public class ExcelUtility {
 	}
 
 	public int getRowCount() {
-		readFile();
+		readFile(path);
 		return sheet.getLastRowNum();
 	}
 
@@ -57,13 +58,13 @@ public class ExcelUtility {
 	}
 
 	public String getCellData(int rownum, int colnum) {
-		readFile();
+		readFile(path);
 		DataFormatter formatter = new DataFormatter();
 	
 		try {
 			String cellData = sheet.getRow(rownum).getCell(colnum).getStringCellValue();
 			if(cellData==null) {
-				
+				return " ";
 			}
 			else {
 				formatter.formatCellValue(cell);

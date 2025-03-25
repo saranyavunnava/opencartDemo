@@ -11,7 +11,7 @@ import TestBase.BaseClass;
 public class TC004_SearchByItem extends BaseClass {
 	@Test(groups= {"sanity"})
 	public void searchItem() {
-		HomePage home=new HomePage(driver);
+		HomePage home=new HomePage(BaseClass.getDriver());
 		home.enterSearchCriteria(prop.getProperty("searchItem"));
 		logger.info("search item entered");
 		if(home.clickSearch()) {
