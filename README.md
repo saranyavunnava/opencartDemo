@@ -1,3 +1,6 @@
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="saranya-mukku-aab98834a" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/saranya-mukku-aab98834a?trk=profile-badge">SARANYA MUKKU</a></div>
+              
+
 #OpenCartDemo
 "OpencartDemo" is a feature-rich e-commerce website that includes all the standard functionalities typically found in online shopping platforms. Using this website, I have developed a Hybrid Test Automation Framework from scratch, utilizing Selenium WebDriver, Java, and TestNG for efficient and scalable test execution.
 
